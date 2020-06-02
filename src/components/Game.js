@@ -97,7 +97,7 @@ class Game extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board squares={this.state.history[this.state.stepNumber].squares} click={(i) => this.handleClick(i)}/>
+                    <Board squares={this.state.history[this.state.stepNumber].squares} click={(i) => this.handleClick(i)} winner={winner}/>
                 </div>
                 <div className="game-info">
                     <div>In {this.state.moveOrder ? 'ASC' : 'DESC'} order.<button onClick={this.handleOrderChange}>change</button></div>

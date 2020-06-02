@@ -5,7 +5,7 @@ import '../index.css';
 class Board extends React.Component {
 
     renderSquare(i) {
-        return <Square value={this.props.squares[i]} click={() => this.props.click(i)} key={i}/>;
+        return <Square value={this.props.squares[i]} click={() => this.props.click(i)} key={i} highlight={this.props.winner ? this.props.winner.includes(i) : null}/>;
     }
 
     renderRow = (i) => {
